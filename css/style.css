@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* This is for the base styles such as h1,h2,h3 */
+@layer base {
+  body {
+    font-family: "Montserrat", sans-serif;
+    /* background-color: blue; */
+  }
+  ul li {
+    font-weight: 700;
+    padding-block: 0.8rem;
+    color: hsl(232, 13%, 33%);
+  }
+  ul li:not(:first-child) {
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+  }
+  ul li:last-child {
+    margin-bottom: 0.8rem;
+  }
+}
+
+/* This is for custom styles with classes and id */
+@layer components {
+  .card-i {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+      rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  }
+
+  .card-pro {
+    background-image: linear-gradient(
+      to bottom right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+    );
+  }
+
+  .active {
+    color: hsl(237, 63%, 64%);
+  }
+  .pro-cont li {
+    color: hsl(240, 78%, 98%);
+  }
+  .amt-txt {
+    font-weight: 700;
+    font-size: 3rem;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    /* background-color: orange; */
+    background-image: linear-gradient(
+      to right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+    );
+    color: hsl(240, 78%, 98%);
+
+    transition: all 0.2s;
+  }
+  .btn-pro {
+    border: 1px solid transparent;
+    color: hsl(237, 63%, 64%);
+    background-image: linear-gradient(hsl(240, 78%, 98%), hsl(240, 78%, 98%));
+  }
+
+  /* Styling the toggle btn */
+  .toogle-cont {
+    display: flex;
+    max-width: 15rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: orange; */
+  }
+
+  .ch input {
+    /* display: none; */
+    opacity: 0;
+    box-sizing: border-box;
+  }
+  .ch {
+    display: inline-block;
+    height: 25px;
+    width: 50px;
+    margin: 3px;
+    border-radius: 1rem;
+    background-color: hsl(237, 63%, 64%);
+    position: relative;
+  }
+  .ts::before {
+    content: "";
+    position: absolute;
+    top: 3.5px;
+    left: 3px;
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+
+    transform: translateX(25px);
+
+    transition: all 0.3s ease;
+  }
+  input:checked + .ts::before {
+    transform: translateX(0);
+  }
+
+  @media screen and (min-width: 1024px) {
+    .btn-pro:hover {
+      border: 1px solid #fff;
+      color: #fff;
+      background-image: linear-gradient(to right, transparent, transparent);
+    }
+    .btn-nm:hover {
+      border: 1px solid hsl(237, 63%, 64%);
+      background-image: none;
+      background-color: transparent;
+      color: hsl(237, 63%, 64%);
+    }
+    .ch input:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "frontend-9",
+  "version": "1.0.0",
+  "description": "![Design preview for the Pricing component with toggle coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "compile-css": "npx tailwindcss -i ./css/style.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "Erick ngechu",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}

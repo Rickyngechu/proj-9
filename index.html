@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="dist/output.css" />
+    <title>Frontend Mentor | Pricing component with toggl</title>
+  </head>
+  <body>
+    <div class="pricing bg-Very-Light-Grayish-Blue py-10">
+      <div class="cont w-11/12 mx-auto">
+        <div class="price max-w-sm mx-auto lg:max-w-5xl">
+          <div class="pricing-head text-center mb-5 lg:mb-10">
+            <h1 class="text-3xl font-bold text-Grayish-Blue mb-3">
+              Our pricing
+            </h1>
+            <div class="toogle-cont">
+              <span class="annual">Annually</span>
+              <div class="ch">
+                <input type="checkbox" id="type" class="check-toggle" />
+                <span class="ts"></span>
+              </div>
+
+              <span class="month active">Monthly</span>
+            </div>
+          </div>
+
+          <div class="pricing-cards__con text-center lg:flex justify-between">
+            <div class="card-i mb-5 lg:w-72 lg:h-[24rem]">
+              <ul>
+                <li class="">Basic</li>
+                <li class="amt-txt">
+                  <b>$</b> <span class="amt-txt-1">19.99</span>
+                </li>
+                <li>500 GB Storage</li>
+                <li>2 Users Allowed</li>
+                <li>Send up to 3GB</li>
+              </ul>
+              <button class="btn btn-nm">Learn more</button>
+            </div>
+
+            <div
+              class="card-i card-pro mb-5 lg:w-72 lg:-translate-y-5 lg:h-[27rem] lg:py-5"
+            >
+              <ul class="pro-cont lg:mb-10 block">
+                <li>Proffessional</li>
+                <li class="amt-txt">
+                  <b>$</b> <span class="amt-txt-2">24.99</span>
+                </li>
+                <li>1TB Storage</li>
+                <li>5 Users Allowed</li>
+                <li>Send up to 10GB</li>
+              </ul>
+              <button class="btn btn-pro">Learn more</button>
+            </div>
+
+            <div class="card-i mb-5 lg:w-72 lg:h-[24rem]">
+              <ul>
+                <li>Master</li>
+                <li class="amt-txt">
+                  <b>$</b> <span class="amt-txt-3">39.99</span>
+                </li>
+                <li>2TB Storage</li>
+                <li>10 Users Allowed</li>
+                <li>Send up to 20GB</li>
+              </ul>
+              <button class="btn btn-nm">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="script.js"></script>
+  </body>
+</html>
